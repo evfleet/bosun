@@ -1,0 +1,14 @@
+{
+  "name": "bosun",
+  "private": true,
+  "author": "Evan Fleet",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "format": "prettier --write \"packages/**/*.{js,jsx,ts,tsx,json,md}\""
+  },
+  "devDependencies": {
+    "prettier": "^2.8.8"
+  }
+}
