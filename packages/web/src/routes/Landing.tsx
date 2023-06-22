@@ -10,9 +10,9 @@ const Landing = () => {
           </h1>
 
           <p className="mb-4">
-            Kick back and relax knowing your images are being taken care of by
-            the best. We'll make sure your images load fast, look great, and are
-            always available.
+            Kick back and relax knowing your images are being taken care of.
+            We'll make sure your images load fast, look great, and are always
+            available.
           </p>
 
           <button className="rounded bg-blue-500 px-4 py-2 text-white shadow-sm">
