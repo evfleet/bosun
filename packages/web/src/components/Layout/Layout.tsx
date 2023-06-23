@@ -10,13 +10,13 @@ interface LayoutProps {
 const Layout: FunctionComponent<LayoutProps> = ({ children }) => {
   return (
     <div className="flex h-screen flex-col">
-      <div className="border-b-2 p-2">
-        <Header />
-      </div>
+      <Header />
 
-      <main className="flex-1 bg-blue-50 p-2">{children}</main>
+      <div className="border-b-2"></div>
 
-      <div className="bg-gray-700 p-2 text-white">
+      <main className="flex-1">{children}</main>
+
+      <div className="bg-gray-700 text-white">
         <Footer />
       </div>
     </div>

@@ -2,5 +2,7 @@
   "plugins": [
     "prettier-plugin-tailwindcss"
   ],
-  "tailwindFunctions": []
+  "tailwindFunctions": [
+    "clsx"
+  ]
 }
