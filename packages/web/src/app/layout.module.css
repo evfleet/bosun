@@ -1,0 +1,5 @@
+.container {
+  display: grid;
+  grid-template-rows: 3.5rem 1fr minmax(3rem, auto);
+  min-height: 100svh;
+}

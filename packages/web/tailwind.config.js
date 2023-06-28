@@ -9,6 +9,9 @@ module.exports = {
     colors: {
       gray: generateScale("gray"),
     },
+    fontFamily: {
+      sans: ["var(--font-inter)"],
+    },
   },
   plugins: [],
 };
