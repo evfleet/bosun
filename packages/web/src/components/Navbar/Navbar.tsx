@@ -24,7 +24,7 @@ const Navbar = () => {
       <div className="container mx-auto flex h-full items-center justify-between">
         <Brand />
 
-        <nav className="flex h-full items-center md:relative" aria-label="Main">
+        <nav aria-label="Main" className="flex h-full items-center md:relative">
           <Hamburger isOpen={isOpen} setIsOpen={setIsOpen} />
           <Navigation isOpen={isOpen} setIsOpen={setIsOpen} />
         </nav>

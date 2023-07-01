@@ -12,16 +12,24 @@ const Hamburger: FunctionComponent<HamburgerProps> = ({
 }) => {
   return (
     <button
-      className="md:hidden"
       onClick={() => setIsOpen(!isOpen)}
       aria-controls="main-menu"
       aria-expanded={isOpen ? "true" : "false"}
       aria-label={isOpen ? "Close Menu" : "Open Menu"}
+      className="group md:hidden"
     >
       {isOpen ? (
-        <Cross1Icon height={30} width={30} />
+        <Cross1Icon
+          width={30}
+          height={30}
+          className="stroke-gray-11 hover:stroke-gray-12 group-focus:stroke-gray-12"
+        />
       ) : (
-        <HamburgerMenuIcon height={30} width={30} />
+        <HamburgerMenuIcon
+          width={30}
+          height={30}
+          className="stroke-gray-11 hover:stroke-gray-12 group-focus:stroke-gray-12"
+        />
       )}
     </button>
   );

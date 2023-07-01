@@ -29,20 +29,32 @@ const Navigation: FunctionComponent<NavigationProps> = ({
       <ul
         id="main-menu"
         role="list"
-        className="flex flex-col md:h-14 md:flex-row md:gap-4"
+        className="flex flex-col font-semibold text-gray-11  md:h-14 md:flex-row md:gap-4"
       >
-        <li className="flex items-center">
-          <Link href="/#features" onClick={handleLinkClick}>
+        <li className="flex items-center hover:text-gray-12 focus:text-gray-12">
+          <Link
+            href="/#features"
+            onClick={handleLinkClick}
+            className="focus:text-gray-12"
+          >
             Features
           </Link>
         </li>
-        <li className="flex items-center">
-          <Link href="/pricing" onClick={handleLinkClick}>
+        <li className="flex items-center hover:text-gray-12">
+          <Link
+            href="/pricing"
+            onClick={handleLinkClick}
+            className="focus:text-gray-12"
+          >
             Pricing
           </Link>
         </li>
-        <li className="flex items-center">
-          <Link href="/docs" onClick={handleLinkClick}>
+        <li className="flex items-center hover:text-gray-12">
+          <Link
+            href="/docs"
+            onClick={handleLinkClick}
+            className="focus:text-gray-12"
+          >
             Documentation
           </Link>
         </li>
