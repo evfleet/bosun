@@ -20,7 +20,7 @@ const Navigation: FunctionComponent<NavigationProps> = ({
       className={twMerge(
         /* Subtract from top to cover navbar border */
         "absolute left-0 right-0 top-[calc(3.5rem-1px)] z-50",
-        "md:static md:left-auto md:right-auto md:top-auto md:block md:h-14",
+        "md:static md:block md:h-14",
         "px-2",
         "border-b border-gray-6 bg-gray-1",
         [!isOpen && "hidden"]
