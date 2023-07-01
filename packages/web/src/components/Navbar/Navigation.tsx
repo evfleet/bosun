@@ -11,25 +11,40 @@ const Navigation: FunctionComponent<NavigationProps> = ({
   isOpen,
   setIsOpen,
 }) => {
+  const handleLinkClick = () => {
+    setIsOpen(false);
+  };
+
   return (
     <div
       className={twMerge(
         /* Subtract from top to cover navbar border */
-        "absolute left-0 top-[calc(3.5rem-1px)] z-50",
-        "w-screen px-2",
+        "absolute left-0 right-0 top-[calc(3.5rem-1px)] z-50",
+        "md:static md:left-auto md:right-auto md:top-auto md:block md:h-14",
+        "px-2",
         "border-b border-gray-6 bg-gray-1",
         [!isOpen && "hidden"]
       )}
     >
-      <ul id="main-menu" role="list" className="container mx-auto ">
-        <li>
-          <Link href="/#features">Features</Link>
+      <ul
+        id="main-menu"
+        role="list"
+        className="flex flex-col md:h-14 md:flex-row md:gap-4"
+      >
+        <li className="flex items-center">
+          <Link href="/#features" onClick={handleLinkClick}>
+            Features
+          </Link>
         </li>
-        <li>
-          <Link href="/pricing">Pricing</Link>
+        <li className="flex items-center">
+          <Link href="/pricing" onClick={handleLinkClick}>
+            Pricing
+          </Link>
         </li>
-        <li>
-          <Link href="/docs">Documentation</Link>
+        <li className="flex items-center">
+          <Link href="/docs" onClick={handleLinkClick}>
+            Documentation
+          </Link>
         </li>
       </ul>
     </div>

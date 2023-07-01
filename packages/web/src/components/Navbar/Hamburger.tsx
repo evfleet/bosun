@@ -12,6 +12,7 @@ const Hamburger: FunctionComponent<HamburgerProps> = ({
 }) => {
   return (
     <button
+      className="md:hidden"
       onClick={() => setIsOpen(!isOpen)}
       aria-controls="main-menu"
       aria-expanded={isOpen ? "true" : "false"}

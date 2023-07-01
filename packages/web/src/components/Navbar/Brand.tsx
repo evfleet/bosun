@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const Brand = () => {
   return (
-    <header className="h-full flex-1">
+    <header className="h-full">
       <Link href="#" className="flex h-full items-center gap-1">
         <svg
           xmlns="http://www.w3.org/2000/svg"
