@@ -1,9 +1,9 @@
 import { Inter } from "next/font/google";
 
 import Footer from "@/components/Footer";
-import Header from "@/components/Header";
+import Navbar from "@/components/Navbar";
 import "./globals.css";
-import styles from "./layout.module.css";
+import classes from "./layout.module.css";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -14,10 +14,10 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <html lang="en" className={`${inter.variable} font-sans`}>
       <body>
-        <div className={styles.container}>
-          <Header />
+        <div className={classes.container}>
+          <Navbar />
 
-          <main>{children}</main>
+          <main className="bg-gray-2">{children}</main>
 
           <Footer />
         </div>

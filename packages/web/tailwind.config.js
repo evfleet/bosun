@@ -7,6 +7,7 @@ module.exports = {
   ],
   theme: {
     colors: {
+      blue: generateScale("blue"),
       gray: generateScale("gray"),
     },
     fontFamily: {
