@@ -1,0 +1,17 @@
+{
+  "name": "@bosun/api",
+  "type": "module",
+  "version": "0.1.0",
+  "author": "Evan Fleet",
+  "scripts": {
+    "dev": "tsx src/index.ts"
+  },
+  "dependencies": {
+    "express": "^4.21.2"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  }
+}
