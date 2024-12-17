@@ -24,6 +24,15 @@ importers:
         specifier: ^5.7.2
         version: 5.7.2
 
+  packages/cli:
+    devDependencies:
+      '@types/node':
+        specifier: ^20
+        version: 20.17.10
+      typescript:
+        specifier: ^5.7.2
+        version: 5.7.2
+
   packages/web:
     dependencies:
       next:
