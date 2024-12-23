@@ -1,6 +1,10 @@
 #! /usr/bin/env node
+import "dotenv/config";
+
 import { confirm } from "@inquirer/prompts";
 import { Command } from "commander";
+
+import { transform } from "./actions/transform.js";
 
 const program = new Command();
 
@@ -35,5 +39,10 @@ program
   .action((input) => {
     console.log(`this is the input ${input}`);
   });
+
+program
+  .command("transform <input>")
+  .description("transform image")
+  .action(transform);
 
 program.parse(process.argv);
