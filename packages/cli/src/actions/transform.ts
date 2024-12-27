@@ -1,18 +1,17 @@
-import fs from "fs/promises";
+import axios from "axios";
+import fs from "fs";
 import path from "path";
 
 export async function transform(input: string) {
-  const inputPath = path.resolve(process.cwd(), input);
-  const file = await fs.readFile(inputPath);
-  const filename = inputPath.split("/").at(-1);
+  const inputs = {
+    input1: fs.createReadStream(path.resolve(process.cwd(), input)),
+  };
 
-  const form = new FormData();
-
-  form.append("file", new Blob([file]), filename);
-
-  const res = await fetch(`${process.env.BACKEND_URL}/upload`, {
-    method: "POST",
-    body: form,
+  // using axios to properly serialize streams, native fetch needed weird hacks
+  const res = await axios.post(`${process.env.BACKEND_URL}/upload`, inputs, {
+    headers: {
+      "Content-Type": "multipart/form-data",
+    },
   });
 
   console.log(res);
