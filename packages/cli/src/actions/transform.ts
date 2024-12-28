@@ -1,18 +1,18 @@
-import fs from "fs/promises";
+import axios from "axios";
+import fs from "fs";
 import path from "path";
 
 export async function transform(input: string) {
-  const inputPath = path.resolve(process.cwd(), input);
-  const file = await fs.readFile(inputPath);
-  const filename = inputPath.split("/").at(-1);
+  const files = {
+    file: fs.createReadStream(path.resolve(process.cwd(), input)),
+  };
 
-  const form = new FormData();
-
-  form.append("file", new Blob([file]), filename);
-
-  const res = await fetch(`${process.env.BACKEND_URL}/upload`, {
-    method: "POST",
-    body: form,
+  // TODO: Had problem with node fetch working with busboy
+  // using axios to set headers and serialize read streams
+  const res = await axios.post(`${process.env.BACKEND_URL}/upload`, files, {
+    headers: {
+      "Content-Type": "multipart/form-data",
+    },
   });
 
   console.log(res);
